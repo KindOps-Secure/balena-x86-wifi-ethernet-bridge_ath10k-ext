@@ -1,11 +1,8 @@
-name: x86 ath10k firmware hostapp extension
+name: x86-ath10k-ext
 type: sw.hostapp
-slug: x86-ath10k-firmware-extension
+version: 1.0.0
 
 data:
   defaultDeviceType: genericx86-64-ext
   supportedDeviceTypes:
     - genericx86-64-ext
-  description: >
-    Host OS extension that adds ath10k firmware (firmware-atheros) for
-    Qualcomm-based Wi-Fi NICs on genericx86-64-ext devices.
