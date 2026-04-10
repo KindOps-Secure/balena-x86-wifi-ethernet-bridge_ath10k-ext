@@ -11,4 +11,4 @@ RUN apt-get update && \
 RUN mkdir -p /lib/firmware/ath10k
 
 # Optional: drop in any custom board/firmware blobs if you have them
-COPY firmware/ath10k/ /lib/firmware/ath10k/
+COPY firmware/ath10k/QCA988X/hw2.0/ /lib/firmware/ath10k/QCA988X/hw2.0/
