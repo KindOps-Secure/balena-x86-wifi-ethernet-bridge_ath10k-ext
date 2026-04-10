@@ -1,0 +1,14 @@
+# Replace <BALENAOS_VERSION> with the exact OS version your fleet runs,
+# e.g.  2.126.0  or  5.0.0
+FROM balena-os/genericx86-64-ext:<BALENAOS_VERSION>
+
+# Install ath10k firmware (via Debian firmware-atheros)
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends firmware-atheros && \
+    rm -rf /var/lib/apt/lists/*
+
+# Ensure firmware directory exists (usually already present, but harmless)
+RUN mkdir -p /lib/firmware/ath10k
+
+# Optional: drop in any custom board/firmware blobs if you have them
+COPY firmware/ath10k/ /lib/firmware/ath10k/
